@@ -1,5 +1,7 @@
 
 class LinearRegresion:
+  import numpy as np
+  import scipy.stats as st
   def __init__(self,x:list,y:list):
     import numpy as np
     import scipy.stats as st
@@ -61,5 +63,5 @@ class LinearRegresion:
   def predition(self,a):
     import numpy as np
     import scipy.stats as st
-    betas_est = np.dot(self.x,np.dot((np.linalg.inv(np.dot(self.x.T,self.x)))))
-    return self.betas[0] + self.betas[1:] @ a
+    betas = np.dot((np.linalg.inv(np.dot(self.x.T,self.x))),(np.dot(self.x.T,self.y)))
+    return betas[0]+np.dot(a,betas[1:])
