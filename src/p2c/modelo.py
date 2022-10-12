@@ -61,5 +61,7 @@ class LinearRegresion:
       en="No hay suficiente evidencia estadistica para considerar que los errores siguen una distribución normal "
     return [stadistic,pval,en]
   def predition(self,a):
+    import numpy as np
+    import scipy.stats as st
     betas = np.dot((np.linalg.inv(np.dot(self.x.T,self.x))),(np.dot(self.x.T,self.y)))
     return betas[0]+np.dot(a,betas[1:])

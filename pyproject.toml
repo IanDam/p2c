@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "p2c"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Damian Leon", email="damianleon@usantotomas.edu.co" },
 ]
